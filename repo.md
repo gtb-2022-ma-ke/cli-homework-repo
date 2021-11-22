@@ -12,11 +12,28 @@ function odd-or-even(){
 reg_int='^[1-9][0-9]*$|^[-][1-9][0-9]*$|^0$'
 if [[ "$1" =~ $reg_int ]] ; then
 	    if [ $(($1 % 2)) == 0 ] ; then
-		         echo "even"
-			     else
-				          echo "odd"
-					      fi
-				      else
-					          echo "Not a Number"
+		    echo "even"
+		else
+			echo "odd"
+		fi
+else
+	echo "Not a Number"
 fi
 }
+
+'''First, judge the input parameter is a integer or not, if not, print "Not a Number".Then judge it is even or odd, by modular 2'''
+
+## Answer 4
+#!/bin/bash
+if [ -f "./data.log" ]; then
+    value=$(cat ./data.log) 
+    value=$[$value+1]
+    echo $value > data.log
+    echo $value
+else
+    value=1
+    echo $value > data.log
+    echo $value
+fi
+'''If there is a data.log file, that means we have done at least once, then increase and save to data.log. If there isn't a data.log file, that means we do it for first time, and creat the file with value 1.'''
+
