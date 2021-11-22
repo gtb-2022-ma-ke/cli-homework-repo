@@ -37,3 +37,6 @@ else
 fi
 '''If there is a data.log file, that means we have done at least once, then increase and save to data.log. If there isn't a data.log file, that means we do it for first time, and creat the file with value 1.'''
 
+##Answer 5
+cat Q5-test.txt|awk '{sum+=$1} END {print sum}'
+'''Q5-test.txt is [1,2,3,4] line by line'''
